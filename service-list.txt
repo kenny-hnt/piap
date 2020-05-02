@@ -1,0 +1,8 @@
+SERVICE:STATUS
+---------------------
+wpa_supplicant:ON
+dhcpcd:ON
+dnsmasq:ON
+hostapd:ON
+systemd-networkd:OFF
+systemd-resolved:OFF

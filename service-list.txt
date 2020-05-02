@@ -6,3 +6,5 @@ dnsmasq:ON
 hostapd:ON
 systemd-networkd:OFF
 systemd-resolved:OFF
+isc-dhcp-server:OFF
+isc-dhcp-client:OFF

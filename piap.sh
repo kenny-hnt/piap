@@ -36,6 +36,7 @@ cp etc.wpa_supplicant.wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.con
 echo -e "\nSetup network interfaces..."
 mv /etc/network/interfaces /etc/network/interfaces.original
 cp etc.network.interfaces /etc/network/interfaces
+rfkill unblock wifi
 
 echo -e "\nSetup dhcpcd..."
 mv /etc/dhcpcd.conf /etc/dhcpcd.conf.original
@@ -48,6 +49,8 @@ cp etc.dnsmasq.conf /etc/dnsmasq.conf
 echo -e "\nSetup hostapd..."
 mv /etc/hostapd/hostapd.conf /etc/hostapd/hostapd.conf.original
 cp etc.hostapd.hostapd.conf /etc/hostapd/hostapd.conf 
+systemctl unmask hostapd
+systemctl enable hostapd
 
 echo -e "\nSetup NAT..."
 sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf

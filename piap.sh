@@ -27,7 +27,7 @@ pp "Setup required services: ${requiredService}"
 for service in $requiredService 
 do
 	echo -e "\nInstalling $service"
-	apt-get install $service
+	apt-get install -y $service
 	systemctl enable $service
 done
 

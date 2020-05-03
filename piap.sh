@@ -5,7 +5,7 @@ _GREEN="\033[0;32m"
 _RESET="\033[m"
 
 function pp(){
-	echo -e -e "${_GREEN}$1...${_RESET}\n"
+	echo -e "${_GREEN}$1...${_RESET}\n"
 }
 
 backupFile(){

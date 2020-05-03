@@ -12,8 +12,6 @@ backupFile(){
 	targetFile=$1
 	if [ ! -f ${targetFile}.original ] ; then 
 		mv ${targetFile} ${targetFile}.original	
-	else
-		echo "file existed"
 	fi
 }
 

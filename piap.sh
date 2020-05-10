@@ -14,6 +14,8 @@ backupFile(){
 		mv ${targetFile} ${targetFile}.original	
 	fi
 }
+pp "Update Software"
+apt-get update
 
 unusedServices="systemd-networkd systemd-resolved isc-dhcp-server isc-dhcp-client"
 pp "Turning Off the unused services: ${unusedServices}"
